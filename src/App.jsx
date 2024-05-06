@@ -9,8 +9,8 @@ import { fetchContacts } from './redux/contactsOps';
 
 const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.contacts.isLoading);
-  const error= useSelector((state)=>state.contacts.error)
+  const selectLoading = useSelector((state) => state.contacts.isLoading);
+  const selectError= useSelector((state)=>state.contacts.error)
   useEffect(() => {
     dispatch(fetchContacts())
   }, [dispatch]);
@@ -19,7 +19,7 @@ const App = () => {
     <div>
       <h1>Phonebook</h1>
       <ContactFrom />
-        {isLoading && !error && <b>Request in progress...</b>}
+       {selectLoading && !selectError && <b>Request in progress...</b>}
       <SearchBox />
       <ContacList />
     </div>

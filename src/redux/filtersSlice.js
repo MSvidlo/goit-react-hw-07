@@ -14,3 +14,4 @@ const searchBoxSlice = createSlice({
 export const { changeFilter } = searchBoxSlice.actions;
 
 export const filterReducer=  searchBoxSlice.reducer;
+export const filter= searchBoxSlice.selectors
