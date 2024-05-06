@@ -21,7 +21,7 @@ const SearchBox = () => {
         className={css.filterInput}
         type="text"
         id="search"
-        name="search"
+        name="filter"
         value={selectNameFilter}
         onChange={handleChange}
       />
