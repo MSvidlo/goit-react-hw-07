@@ -15,9 +15,10 @@ export const selectFilteredContacts =createSelector([selectContacts,selectFilter
 
 const handlePending = (state) => {
   state.isLoading = true;
+ state.error = null; 
 };
 
-const handleRejected = (state) => {
+const handleRejected = (state,action) => {
   state.isLoadinf = false;
   state.error = action.payload;
 }
